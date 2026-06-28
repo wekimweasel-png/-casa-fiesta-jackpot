@@ -1,0 +1,246 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#090909;
+color:white;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+ul{
+list-style:none;
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+padding:15px;
+text-align:center;
+border-bottom:2px solid gold;
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:gold;
+}
+
+.logo span{
+display:block;
+font-size:15px;
+letter-spacing:4px;
+color:white;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:12px;
+margin-top:15px;
+}
+
+.menu a{
+font-size:22px;
+font-weight:700;
+color:white;
+}
+
+.menu a:hover{
+color:gold;
+}
+
+.hero{
+padding-top:220px;
+padding-bottom:80px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1600");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:750px;
+}
+
+.hero h1{
+font-size:56px;
+color:gold;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+color:#ddd;
+}
+
+button{
+padding:18px 45px;
+font-size:20px;
+font-weight:bold;
+background:gold;
+color:black;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px gold;
+}
+
+.section{
+padding:90px 20px;
+}
+
+.section h2{
+text-align:center;
+font-size:42px;
+color:gold;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:#151515;
+border:2px solid #2b2b2b;
+border-radius:18px;
+padding:30px;
+text-align:center;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:gold;
+box-shadow:0 0 30px rgba(255,215,0,.35);
+}
+
+.card h3{
+color:gold;
+font-size:24px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#d0d0d0;
+font-size:16px;
+}
+
+#promotions .card{
+background:linear-gradient(180deg,#1a1a1a,#101010);
+}
+
+#vip .card{
+background:linear-gradient(180deg,#1f1a08,#111);
+}
+
+#contact .card{
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:20px;
+font-weight:700;
+min-height:90px;
+color:white;
+}
+
+#contact .card:hover{
+background:gold;
+color:black;
+}
+
+footer{
+background:#050505;
+padding:30px 20px;
+text-align:center;
+border-top:2px solid gold;
+color:#aaa;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hero-content,
+.card,
+.section h2{
+animation:fadeUp .8s ease;
+}
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+padding:15px;
+}
+
+.menu{
+margin-top:15px;
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+button{
+width:100%;
+max-width:300px;
+}
+
+.section h2{
+font-size:30px;
+}
+
+.logo{
+font-size:22px;
+}
+
+}
